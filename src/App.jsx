@@ -18,31 +18,31 @@ function App() {
         <ParallaxBanner className="w-full md:min-h-dvh m-0 hidden md:block">
 
           <ParallaxBannerLayer speed={30} style={{ zIndex: 0 }}>
-            <img src="src/assets/cielo.png" alt="Cielo" className="w-full mt-60"/>
+            <img src="/cielo.png" alt="Cielo" className="w-full mt-60"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-5} style={{ zIndex: 1 }}>
-            <img src="src/assets/nubes.png" alt="Nubes" className="lg:mt-40 mt-35"/>
+            <img src="/nubes.png" alt="Nubes" className="lg:mt-40 mt-35"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-10} style={{ zIndex: 3 }}>
-            <img src="src/assets/marco_flores.png" alt="Marco Flores" className="mt-20"/>
+            <img src="/marco_flores.png" alt="Marco Flores" className="mt-20"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-20} style={{ zIndex: 1 }}>
-            <img src="src/assets/arboles_fondo.png" alt="Arboles" className="mt-30"/>
+            <img src="/arboles_fondo.png" alt="Arboles" className="mt-30"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-10} style={{ zIndex: 2 }}>
-            <img src="src/assets/bamboo.png" alt="Bamboo" className="lg:mt-15"/>
+            <img src="/bamboo.png" alt="Bamboo" className="lg:mt-15"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="src/assets/camino.png" alt="Casa" className="lg:mt-50 mt-20"/>
+            <img src="/camino.png" alt="Casa" className="lg:mt-50 mt-20"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="src/assets/casa_pintada.png" alt="Casa" className="lg:mt-50 mt-20"/>
+            <img src="/casa_pintada.png" alt="Casa" className="lg:mt-50 mt-20"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-25} style={{ zIndex: 1 }}>
@@ -52,12 +52,12 @@ function App() {
 
         {/* Casa Mobile */}
         <div className="w-full min-h-fit m-0 md:hidden relative">
-          <img src="src/assets/casa_movil.png" alt="Casa Mobile" className="w-full h-70"/>
+          <img src="/casa_movil.png" alt="Casa Mobile" className="w-full h-70"/>
           <h1 className="w-full text-5xl font-Gwendolyn text-center absolute top-30 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Alberto & Yissel</h1>
         </div>
 
         <Parallax speed={5} style={{ zIndex: 3 }}>
-          <img src="src/assets/flores_transicion.png" 
+          <img src="/flores_transicion.png" 
             alt="Flores Transicion" 
             className="w-full z-20 -mt-5 sm:-mt-40"/>
         </Parallax>
@@ -65,15 +65,15 @@ function App() {
         {/* Calendario */ }
         <Calendar targetDate="2026-06-07T16:00:00" />
 
-        <img src="src/assets/divider.png" alt="Divider" className="my-16"/>
+        <img src="/divider.png" alt="Divider" className="my-16"/>
 
         <ImagesDisplay />
 
-        <img src="src/assets/divider.png" alt="Divider" className="my-16"/>
+        <img src="/divider.png" alt="Divider" className="my-16"/>
 
         <Mapa />
 
-        <img src="src/assets/divider.png" alt="Divider" className="my-16"/>
+        <img src="/divider.png" alt="Divider" className="my-16"/>
 
         <div className="text-center px-4 text-[#6B6761]">
           <h2 className="font-bold text-4xl mb-10 tracking-[0.1em]">CÓDIGO DE VESTIMENTA</h2>
@@ -87,12 +87,12 @@ function App() {
 
         <Formulario />
 
-        <img src="src/assets/divider.png" alt="Divider"/>
+        <img src="/divider.png" alt="Divider"/>
 
         {/* Footer */}
         <div className="h-48 w-full m-0 sm:mt-15">
-          <img src="src/assets/flores_bottom.png" alt="Footer Decoration" className="w-full h-full object-cover hidden md:block" />
-          <img src="src/assets/flores_bottom.png" alt="Footer Decoration Mobile" className="w-fit h-full object-cover md:hidden" />
+          <img src="/flores_bottom.png" alt="Footer Decoration" className="w-full h-full object-cover hidden md:block" />
+          <img src="/flores_bottom.png" alt="Footer Decoration Mobile" className="w-fit h-full object-cover md:hidden" />
         </div>
       </div>
 
