@@ -90,11 +90,40 @@ function App() {
 
         <img src="/divider.png" alt="Divider"/>
 
-        {/* Footer */}
-        <div className="h-48 w-full m-0 sm:mt-15">
-          <img src="/flores_bottom.png" alt="Footer Decoration" className="w-full h-full object-cover hidden md:block" />
-          <img src="/flores_bottom.png" alt="Footer Decoration Mobile" className="w-fit h-full object-cover md:hidden" />
+      {/* Footer */}
+      <footer className="w-full m-0 sm:mt-15">
+        <div className="relative h-48 w-full">
+          {/* Imagen decorativa */}
+          <img
+            src="/flores_bottom.png"
+            alt="Footer Decoration"
+            className="w-full h-full object-cover"
+          />
+
+          {/* Texto + logo centrados sobre la imagen */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-sm md:text-base font-semibold tracking-wide text-black/80 bg-white/40 px-3 py-1 rounded">
+                Hecho por 
+              </span>
+
+              <a
+                href="https://solventechglobal.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ir a Solventech"
+              >
+                <img
+                  src="/logo.svg"
+                  alt="Solventech Logo"
+                  className="h-6 md:h-5 w-auto opacity-90 hover:opacity-100 cursor-pointer"
+                />
+              </a>
+            </div>
+          </div>
         </div>
+      </footer>
+
       </div>
 
     </div>
