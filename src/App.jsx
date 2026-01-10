@@ -9,7 +9,7 @@ function App() {
     <div className="relative min-h-screen">
 
       {/* Background Overlay */}
-      <div className="bg-[url('/overlay.png')] absolute inset-0 bg-cover opacity-10 z-0"></div>
+      <div className="bg-[url('/overlay.png')] absolute inset-0 opacity-10 z-0"></div>
       
       {/* Content */}
       <div className="relative inset-0 z-10 flex flex-col items-center">
