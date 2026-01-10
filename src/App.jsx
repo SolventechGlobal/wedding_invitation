@@ -76,14 +76,15 @@ function App() {
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
         <div className="text-center px-4 text-[#6B6761]">
-          <h2 className="font-bold text-4xl mb-10 tracking-[0.1em]">CÓDIGO DE VESTIMENTA</h2>
+          <h2 className="font-bold text-4xl mb-10 tracking-widest">CÓDIGO DE VESTIMENTA</h2>
           <p className="text-xl max-w-2xl mx-auto px-4"><strong>Hombres:</strong> Smoking negro.</p>
           <p className="text-xl max-w-2xl mx-auto px-4 mb-6"><strong>Mujeres:</strong> Vestido formal unicolor</p>
           <p className="text-xl font-bold max-w-2xl mx-auto px-4">Se reservan las tonalidades:</p>
           <p className="text-xl max-w-2xl mx-auto px-4 mb-6">Blanco, Beige</p>
-          <img src="src/assets/dresscode.png" alt="Divider" className="my-16 mx-auto"/>
+          <img src="/dresscode.png" alt="Divider" className="my-16 mx-auto"/>
         </div>
-        <img src="src/assets/divider.png" alt="Divider" className="my-16"/>
+        
+        <img src="/divider.png" alt="Divider" className="my-16"/>
 
         <Formulario />
 
