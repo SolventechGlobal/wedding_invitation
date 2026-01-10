@@ -9,13 +9,13 @@ export const ImagesDisplay = () => {
     }, [selectedImage]);
 
     const images = [
-        "src/assets/1.png",
-        "src/assets/3.png",
-        "src/assets/6.png",
-        "src/assets/4.png",
-        "src/assets/7.png",
-        "src/assets/2.png",
-        "src/assets/5.png",
+        "src/public/1.png",
+        "src/public/3.png",
+        "src/public/6.png",
+        "src/public/4.png",
+        "src/public/7.png",
+        "src/public/2.png",
+        "src/public/5.png",
     ];
 
     return (
