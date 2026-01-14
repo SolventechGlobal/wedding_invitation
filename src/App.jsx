@@ -1,8 +1,9 @@
 import { Parallax, ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import Calendar from "./Calendar.jsx";
-import { ImagesDisplay } from "./images_display.jsx";
+import { ImagesDisplay } from "./images.jsx";
 import { Mapa } from "./Mapa.jsx";
 import { Formulario } from "./Formulario.jsx";
+import Timeline from "./Timeline.jsx";
 
 function App() {
   return (
@@ -17,57 +18,75 @@ function App() {
         {/* Casa */}
         <ParallaxBanner className="w-full md:min-h-dvh m-0 hidden md:block">
 
-          <ParallaxBannerLayer speed={30} style={{ zIndex: 0 }}>
-            <img src="/cielo.png" alt="Cielo" className="w-full mt-60"/>
+          <ParallaxBannerLayer speed={10} style={{ zIndex: 0 }}>
+            <img src="/cielo.png" alt="Cielo" className="w-full mt-20"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-5} style={{ zIndex: 1 }}>
             <img src="/nubes.png" alt="Nubes" className="lg:mt-40 mt-35"/>
           </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={-10} style={{ zIndex: 3 }}>
+          <ParallaxBannerLayer speed={-10} style={{ zIndex: 5 }}>
             <img src="/marco_flores.png" alt="Marco Flores" className="mt-20"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-20} style={{ zIndex: 1 }}>
-            <img src="/arboles_fondo.png" alt="Arboles" className="mt-30"/>
+            <img src="/arboles_fondo.png" alt="Arboles" className="mt-35 lg:mt-30"/>
           </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={-10} style={{ zIndex: 2 }}>
+          <ParallaxBannerLayer speed={-10} style={{ zIndex: 4 }}>
             <img src="/bamboo.png" alt="Bamboo" className="lg:mt-15"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="/camino.png" alt="Casa" className="lg:mt-50 mt-20"/>
+            <img src="/camino.png" alt="Casa" className="lg:mt-50 mt-35"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="/casa_pintada.png" alt="Casa" className="lg:mt-50 mt-20"/>
+            <img src="/casa_pintada.png" alt="Casa" className="lg:mt-50 mt-35"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-25} style={{ zIndex: 1 }}>
-            <h1 className="lg:text-9xl text-6xl font-Gwendolyn text-center lg:mt-120 mt-90">Alberto & Yissel</h1>
+            <h1 className="lg:text-8xl text-5xl font-Bellisia text-center lg:mt-120 mt-90">Alberto & Yissel</h1>
           </ParallaxBannerLayer>
         </ParallaxBanner>
 
         {/* Casa Mobile */}
         <div className="w-full min-h-fit m-0 md:hidden relative">
           <img src="/casa_movil.png" alt="Casa Mobile" className="w-full h-70"/>
-          <h1 className="w-full text-5xl font-Gwendolyn text-center absolute top-30 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Alberto & Yissel</h1>
+          <h1 className="w-full text-4xl font-Bellisia text-center absolute top-30 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Alberto & Yissel</h1>
         </div>
 
-        <Parallax speed={5} style={{ zIndex: 3 }}>
+        <Parallax speed={5} style={{ zIndex: 4 }}>
           <img src="/flores_transicion.png" 
             alt="Flores Transicion" 
             className="w-full z-20 -mt-5 sm:-mt-40"/>
         </Parallax>
 
         {/* Calendario */ }
-        <Calendar targetDate="2026-06-07T16:00:00" />
+        <Calendar targetDate="2026-06-07T19:15:00" />
+
+        <img src="/divider.png" alt="Divider" className="my-16"/>
+
+        <div className="text-[#6B6761] flex flex-col items-center px-4 w-full">
+          <h2 className="mb-10 tracking-[7%] text-[1.7rem] md:text-[2.6rem]">NUESTRA HISTORIA</h2>
+          <p className="text-xl max-w-6xl px-4 mb-6 text-justify font-light">
+            Un amor que inició aquel 10 de agosto de 2019. 
+            Fuimos afortunados de que Dios nos encontrara en el mismo lugar y nos guiara para construir un amor sólido, fiel y perseverante. 
+            Hoy ya son 6 años llenos de incontables momentos de felicidad. Con el tiempo hemos aprendido a entendernos, a complementarnos 
+            y a crecer juntos; junto a nuestra familia, nuestras mascotas y nuestros amigos, hemos construido un hogar amoroso, cálido y feliz, 
+            donde todos son recibidos con cariño. Por eso, hemos decidido compartir con ustedes, las personas que amamos, 
+            este día tan especial para nosotros.
+          </p>
+        </div>
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
         <ImagesDisplay />
+
+        <img src="/divider.png" alt="Divider" className="my-16"/>
+
+        <Timeline />
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
@@ -76,11 +95,11 @@ function App() {
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
         <div className="text-center px-4 text-[#6B6761]">
-          <h2 className="font-bold text-4xl mb-10 tracking-widest">CÓDIGO DE VESTIMENTA</h2>
-          <p className="text-xl max-w-2xl mx-auto px-4"><strong>Hombres:</strong> Smoking negro.</p>
-          <p className="text-xl max-w-2xl mx-auto px-4 mb-6"><strong>Mujeres:</strong> Vestido formal unicolor</p>
-          <p className="text-xl font-bold max-w-2xl mx-auto px-4">Se reservan las tonalidades:</p>
-          <p className="text-xl max-w-2xl mx-auto px-4 mb-6">Blanco, Beige</p>
+          <h2 className="mb-10 tracking-wider text-[1.7rem] md:text-[2.6rem]">CÓDIGO DE VESTIMENTA</h2>
+          <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Hombres:</span> Smoking negro.</p>
+          <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6"><span className="font-bold">Mujeres:</span> Vestido formal unicolor</p>
+          <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Se reservan las tonalidades:</span></p>
+          <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6">Blanco, Beige</p>
           <img src="/dresscode.png" alt="Divider" className="my-16 mx-auto"/>
         </div>
         
@@ -88,7 +107,7 @@ function App() {
 
         <Formulario />
 
-        <img src="/divider.png" alt="Divider"/>
+        <img src="/divider.png" alt="Divider" className="my-16"/>
 
       {/* Footer */}
       <footer className="w-full m-0 sm:mt-15">
