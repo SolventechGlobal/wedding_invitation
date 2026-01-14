@@ -4,12 +4,10 @@ import { ImagesDisplay } from "./images.jsx";
 import { Mapa } from "./Mapa.jsx";
 import { Formulario } from "./Formulario.jsx";
 import Timeline from "./Timeline.jsx";
-import InitialLoader from "./InitialLoader.jsx";
-
 function App() {
   return (
     <div className="relative min-h-screen">
-      <InitialLoader />
+
       {/* Background Overlay */}
       <div className="bg-[url('/overlay.png')] absolute inset-0 opacity-5 z-0"></div>
       
