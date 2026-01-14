@@ -4,7 +4,7 @@ import { ImagesDisplay } from "./images.jsx";
 import { Mapa } from "./Mapa.jsx";
 import { Formulario } from "./Formulario.jsx";
 import Timeline from "./Timeline.jsx";
-import InitialLoader from "./initialLoader.jsx";
+import InitialLoader from "./InitialLoader.jsx";
 
 function App() {
   return (
