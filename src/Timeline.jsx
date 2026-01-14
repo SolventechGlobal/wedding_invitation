@@ -75,6 +75,7 @@ export const Timeline = () => {
                     {/* Imagen */}
                     <div className="size-30 md:size-40 shrink-0">
                         <img src={item.image}
+                            loading="lazy"
                             alt=""
                             className="w-full h-full object-contain"
                         />

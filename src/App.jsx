@@ -95,7 +95,7 @@ function App() {
           <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6"><span className="font-bold">Mujeres:</span> Vestido formal unicolor</p>
           <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Se reservan las tonalidades:</span></p>
           <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6">Blanco, Beige</p>
-          <img src="/dresscode.png" alt="Dress Code" className="my-16 mx-auto"/>
+          <img src="/dresscode.png" loading="lazy" alt="Dress Code" className="my-16 mx-auto"/>
 
           <div className="flex flex-row justify-center items-center gap-3">
             <img src="/Carta.png" alt="Sobre" className="w-25"/>

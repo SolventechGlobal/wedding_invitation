@@ -35,6 +35,7 @@ export const ImagesDisplay = () => {
                         className="sm:hidden w-full h-full flex self-center justify-items-center"
                     >
                         <img
+                            loading="lazy"
                             src={img}
                             alt=""
                             className="h-100 self-center justify-self-center mx-auto object-cover rounded-2xl pointer-events-none select-none"
