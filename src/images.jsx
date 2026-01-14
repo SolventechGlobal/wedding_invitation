@@ -16,7 +16,7 @@ export const ImagesDisplay = () => {
     return (
         <div className="w-full overflow-x-hidden">
         <h2 className="font-normal text-[2rem] md:text-[2.6rem] tracking-wider text-center mb-20 text-[#6B6761]">
-            GALERÍA DE FOTOS
+            NUESTRO COMPROMISO
         </h2>
 
         {/* MOBILE → SWIPE */}

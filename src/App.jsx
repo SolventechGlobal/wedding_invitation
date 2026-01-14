@@ -4,11 +4,12 @@ import { ImagesDisplay } from "./images.jsx";
 import { Mapa } from "./Mapa.jsx";
 import { Formulario } from "./Formulario.jsx";
 import Timeline from "./Timeline.jsx";
+import InitialLoader from "./initialLoader.jsx";
 
 function App() {
   return (
     <div className="relative min-h-screen">
-
+      <InitialLoader />
       {/* Background Overlay */}
       <div className="bg-[url('/overlay.png')] absolute inset-0 opacity-5 z-0"></div>
       
@@ -90,18 +91,23 @@ function App() {
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
-        <Mapa />
-
-        <img src="/divider.png" alt="Divider" className="my-16"/>
-
         <div className="text-center px-4 text-[#6B6761]">
           <h2 className="mb-10 tracking-wider text-[1.7rem] md:text-[2.6rem]">CÓDIGO DE VESTIMENTA</h2>
           <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Hombres:</span> Smoking negro.</p>
           <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6"><span className="font-bold">Mujeres:</span> Vestido formal unicolor</p>
           <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Se reservan las tonalidades:</span></p>
           <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6">Blanco, Beige</p>
-          <img src="/dresscode.png" alt="Divider" className="my-16 mx-auto"/>
+          <img src="/dresscode.png" alt="Dress Code" className="my-16 mx-auto"/>
+
+          <div className="flex flex-row justify-center items-center gap-3">
+            <img src="/Carta.png" alt="Sobre" className="w-25"/>
+            <p className="font-medium text-2xl max-w-2xl">Lluvia de Sobres</p>
+          </div>
         </div>
+
+        <img src="/divider.png" alt="Divider" className="my-16"/>
+
+        <Mapa />
         
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
@@ -120,7 +126,7 @@ function App() {
           />
 
           {/* Texto + logo centrados sobre la imagen */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center h-fit">
             <div className="flex flex-col items-center gap-2">
               <span className="text-sm md:text-base font-semibold tracking-wide text-black/80 bg-white/40 px-3 py-1 rounded">
                 Hecho por 

@@ -56,7 +56,7 @@ const Countdown = ({ targetDate }) => {
                     <CountdownCard value={timeLeft.minutes} label="MINUTOS" />
                     <CountdownCard value={timeLeft.seconds} label="SEGUNDOS" />
                 </div>
-                <p className="font-light text-center text-2xl text-[#8a867f]">7 de Junio, 2026</p>
+                <p className="font-bold text-center text-2xl text-[#8a867f]">7 de Junio, 2026</p>
             </Parallax>
         </div>
     );

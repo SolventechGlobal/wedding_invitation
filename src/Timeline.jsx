@@ -61,11 +61,8 @@ export const Timeline = () => {
         <section className="max-w-5xl mx-auto px-6 text-[#6B6761]">
             <div className="w-full flex flex-col items-center mb-16 px-4">
                 <h2 className="self-center tracking-[7%] text-[1.7rem] md:text-[2.6rem]">
-                NUESTRO GRAN DÍA,
+                NUESTRO GRAN DÍA
                 </h2>
-                <p className="text-2xl max-w-2xl mx-auto px-4 font-light">
-                    el paso a paso:
-                </p>
             </div>
             
         <div className="relative">
