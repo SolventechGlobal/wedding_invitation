@@ -25,12 +25,15 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if(loading){
-    return <InitialLoader />;
-  }
-
   return (
       <div className="relative min-h-screen">
+
+        {loading && (
+            <div className="fixed inset-0 z-100 bg-white"> 
+                <InitialLoader />
+            </div>
+        )}
+
         {/* Background Overlay */}
         <div className="bg-[url('/overlay.webp')] absolute inset-0 opacity-5 z-0 bg-repeat w-auto"></div>
       
@@ -87,7 +90,6 @@ function App() {
           </Parallax>
 
           {/* Calendario */ }
-
           <Suspense fallback={<div className="my-16">Cargando...</div>}>
             <Calendar targetDate="2026-06-07T19:15:00" />
           </Suspense>
