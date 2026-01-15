@@ -8,7 +8,7 @@ const InitialLoader = () => {
         // Iniciar un temporizador cuando el componente se monta
         const timer = setTimeout(() => {
         setIsOpen(true); // Abrir automáticamente
-        }, 1000); // Esperar 1.3 segundos (1300ms)
+        }, 1300); // Esperar 1.3 segundos (1300ms)
 
         // Limpieza: si el componente se desmonta antes de que termine el tiempo, limpiamos el timer.
         return () => clearTimeout(timer);
@@ -30,7 +30,7 @@ const InitialLoader = () => {
                     delay-700: Espera un poco a que la solapa se abra antes de empezar a subir lentamente.
                     z-50: Se asegura de quedar ENCIMA de todo el sobre al final.
                 */
-                ? 'scale-[1.4] delay-600 duration-900 z-50 opacity-100' 
+                ? 'scale-[1.4] delay-700 duration-1000 z-50 opacity-100' 
                 /* ESTADO CERRADO:
                     top-16: Posición inicial dentro del sobre.
                     scale-95: Un poco más pequeña adentro.
