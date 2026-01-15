@@ -18,31 +18,31 @@ function App() {
         <ParallaxBanner className="w-full md:min-h-dvh m-0 hidden md:block">
 
           <ParallaxBannerLayer speed={10} style={{ zIndex: 0 }}>
-            <img src="/cielo.png" alt="Cielo" className="w-full mt-20"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/cielo.png" alt="Cielo" className="w-full mt-20"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-5} style={{ zIndex: 1 }}>
-            <img src="/nubes.png" alt="Nubes" className="lg:mt-40 mt-35"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/nubes.png" alt="Nubes" className="lg:mt-40 mt-35"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-10} style={{ zIndex: 5 }}>
-            <img src="/marco_flores.png" alt="Marco Flores" className="mt-20"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/marco_flores.png" alt="Marco Flores" className="mt-20"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-20} style={{ zIndex: 1 }}>
-            <img src="/arboles_fondo.png" alt="Arboles" className="mt-35 lg:mt-30"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/arboles_fondo.png" alt="Arboles" className="mt-35 lg:mt-30"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-10} style={{ zIndex: 4 }}>
-            <img src="/bamboo.png" alt="Bamboo" className="lg:mt-15"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/bamboo.png" alt="Bamboo" className="lg:mt-15"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="/camino.png" alt="Casa" className="lg:mt-50 mt-35"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/camino.png" alt="Casa" className="lg:mt-50 mt-35"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="/casa_pintada.png" alt="Casa" className="lg:mt-50 mt-35"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/casa_pintada.png" alt="Casa" className="lg:mt-50 mt-35"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-25} style={{ zIndex: 1 }}>
