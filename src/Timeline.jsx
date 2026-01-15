@@ -5,55 +5,55 @@ export const Timeline = () => {
         title: "INICIO DEL EVENTO",
         description:
             "Se abren puertas, se acomodan corazones y empieza la cuenta regresiva del amor.",
-        image: "/illus-1.png",
+        image: "/inicio.png",
     },
     {
         time: "4:00 PM",
         title: "CEREMONIA",
         description:
             "Lágrimas bonitas, miradas eternas y un “sí” que lo cambia todo.",
-        image: "/illus-2.png",
+        image: "/ceremonia.png",
     },
     {
         time: "5:00 PM",
         title: "BIENVENIDA Y CÓCTEL",
         description: "Saludos, chismecito y brindis de calentamiento.",
-        image: "/illus-3.png",
+        image: "/cocteles.png",
     },
     {
         time: "6:30 PM",
         title: "ENTRADA DE LOS NOVIOS",
         description:
             "El primer baile con sello de película marca el inicio de la celebración.",
-        image: "/illus-4.png",
+        image: "/entrada_novios.png",
     },
     {
         time: "7:00 PM",
         title: "BRINDIS",
         description:
             "Copas arriba por el amor, por la vida y por la fiesta que se viene.",
-        image: "/illus-5.png",
+        image: "/brindis.png",
     },
     {
         time: "7:30 PM",
         title: "CENA",
         description:
             "Hora de comer rico, recargar energía y planear el primer baile estratégico.",
-        image: "/illus-6.png",
+        image: "/menu.png",
     },
     {
         time: "8:30 PM",
         title: "FIESTA",
         description:
             "Se sueltan los pasos prohibidos, se rompe el protocolo y se enciende la noche.",
-        image: "/illus-7.png",
+        image: "/fiesta.png",
     },
     {
         time: "2:00 AM",
         title: "FIN DEL EVENTO",
         description:
             "Se apagan las luces, pero el amor sigue de after.",
-        image: "/illus-8.png",
+        image: "/fin.png",
     }
     ];
 
