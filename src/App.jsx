@@ -30,7 +30,7 @@ function App() {
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-20} style={{ zIndex: 1 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/arboles_fondo.png" alt="Arboles" className="mt-35 lg:mt-30"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/arboles_fondo2.png" alt="Arboles" className="mt-35 lg:mt-30"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={-10} style={{ zIndex: 4 }}>
@@ -38,7 +38,7 @@ function App() {
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/camino.png" alt="Casa" className="lg:mt-50 mt-35"/>
+            <img src="https://archivos.solventechglobal.com/weeding-assets/camino2.png" alt="Casa" className="lg:mt-50 mt-35"/>
           </ParallaxBannerLayer>
 
           <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
