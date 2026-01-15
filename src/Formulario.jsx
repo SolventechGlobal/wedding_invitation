@@ -1,5 +1,5 @@
 
-export const Formulario = () => {
+const Formulario = () => {
     return(
         <div className="w-full h-full flex flex-col justify-center items-center p-4 text-[#6B6761]">
             <h2 className="mb-2 text-center font-normal text-[1.7rem] md:text-[2.6rem] tracking-wider">CONFIRMA TU ASISTENCIA</h2>
@@ -10,3 +10,5 @@ export const Formulario = () => {
         </div>
     )
 }
+
+export default Formulario;

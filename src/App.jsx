@@ -1,69 +1,81 @@
 import { Parallax, ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
-import Calendar from "./Calendar.jsx";
-import { ImagesDisplay } from "./images.jsx";
-import { Mapa } from "./Mapa.jsx";
-import { Formulario } from "./Formulario.jsx";
-import Timeline from "./Timeline.jsx";
+import { lazy, Suspense } from "react";
+import { useMediaQuery } from "react-responsive";
+
+const Calendar = lazy(() => import("./Calendar"));
+const ImagesDisplay = lazy(() => import("./images"));
+const Mapa = lazy(() => import("./Mapa"));
+const Formulario = lazy(() => import("./Formulario"));
+const Timeline = lazy(() => import("./Timeline"));
+
+
 function App() {
+  const isDesktop = useMediaQuery({
+      query: '(min-width: 768px)'
+  });
+
   return (
     <div className="relative min-h-screen">
-
       {/* Background Overlay */}
-      <div className="bg-[url('/overlay.png')] absolute inset-0 opacity-5 z-0"></div>
-      
+      <div className="bg-[url('/overlay.webp')] absolute inset-0 opacity-5 z-0 bg-repeat w-auto"></div>
+    
       {/* Content */}
       <div className="relative inset-0 z-10 flex flex-col items-center">
 
         {/* Casa */}
-        <ParallaxBanner className="w-full md:min-h-dvh m-0 hidden md:block">
+        {isDesktop ? (
+          <ParallaxBanner className="w-full md:min-h-dvh m-0 hidden md:block">
+            <ParallaxBannerLayer speed={10} style={{ zIndex: 0 }}>
+              <img src="https://archivos.solventechglobal.com/weeding-assets/cielo.webp" alt="Cielo" className="w-full mt-20"/>
+            </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={10} style={{ zIndex: 0 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/cielo.png" alt="Cielo" className="w-full mt-20"/>
-          </ParallaxBannerLayer>
+            <ParallaxBannerLayer speed={-5} style={{ zIndex: 1 }}>
+              <img src="https://archivos.solventechglobal.com/weeding-assets/nubes.webp" alt="Nubes" className="lg:mt-40 mt-35"/>
+            </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={-5} style={{ zIndex: 1 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/nubes.png" alt="Nubes" className="lg:mt-40 mt-35"/>
-          </ParallaxBannerLayer>
+            <ParallaxBannerLayer speed={-10} style={{ zIndex: 5 }}>
+              <img src="https://archivos.solventechglobal.com/weeding-assets/marco_flores.webp" alt="Marco Flores" className="mt-20"/>
+            </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={-10} style={{ zIndex: 5 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/marco_flores.png" alt="Marco Flores" className="mt-20"/>
-          </ParallaxBannerLayer>
+            <ParallaxBannerLayer speed={-20} style={{ zIndex: 1 }}>
+              <img src="https://archivos.solventechglobal.com/weeding-assets/arboles_fondo2.webp" alt="Arboles" className="mt-35 lg:mt-30"/>
+            </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={-20} style={{ zIndex: 1 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/arboles_fondo2.png" alt="Arboles" className="mt-35 lg:mt-30"/>
-          </ParallaxBannerLayer>
+            <ParallaxBannerLayer speed={-10} style={{ zIndex: 4 }}>
+              <img src="https://archivos.solventechglobal.com/weeding-assets/bamboo.webp" alt="Bamboo" className="lg:mt-15"/>
+            </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={-10} style={{ zIndex: 4 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/bamboo.png" alt="Bamboo" className="lg:mt-15"/>
-          </ParallaxBannerLayer>
+            <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
+              <img src="https://archivos.solventechglobal.com/weeding-assets/camino2.webp" alt="Casa" className="lg:mt-50 mt-35"/>
+            </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/camino2.png" alt="Casa" className="lg:mt-50 mt-35"/>
-          </ParallaxBannerLayer>
+            <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
+              <img src="https://archivos.solventechglobal.com/weeding-assets/casa_pintada.webp" alt="Casa" className="lg:mt-50 mt-35"/>
+            </ParallaxBannerLayer>
 
-          <ParallaxBannerLayer speed={5} style={{ zIndex: 3 }}>
-            <img src="https://archivos.solventechglobal.com/weeding-assets/casa_pintada.png" alt="Casa" className="lg:mt-50 mt-35"/>
-          </ParallaxBannerLayer>
-
-          <ParallaxBannerLayer speed={-25} style={{ zIndex: 1 }}>
-            <h1 className="lg:text-8xl text-5xl font-Bellisia text-center lg:mt-120 mt-90">Alberto & Yissel</h1>
-          </ParallaxBannerLayer>
-        </ParallaxBanner>
+            <ParallaxBannerLayer speed={-25} style={{ zIndex: 1 }}>
+              <h1 className="lg:text-8xl text-5xl font-Bellisia text-center lg:mt-120 mt-90">Alberto & Yissel</h1>
+            </ParallaxBannerLayer>
+          </ParallaxBanner>
+        ) : null }
 
         {/* Casa Mobile */}
         <div className="w-full min-h-fit m-0 md:hidden relative">
-          <img src="/casa_movil.png" alt="Casa Mobile" className="w-full h-70"/>
+          <img src="/casa_movil.png" alt="Casa Mobile" className="w-full h-70" loading="lazy" decoding="async"/>
           <h1 className="w-full text-4xl font-Bellisia text-center absolute top-30 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Alberto & Yissel</h1>
         </div>
 
         <Parallax speed={5} style={{ zIndex: 4 }}>
-          <img src="https://archivos.solventechglobal.com/weeding-assets/flores_transicion.png" 
+          <img src="https://archivos.solventechglobal.com/weeding-assets/flores_transicion.webp" 
             alt="Flores Transicion" 
             className="w-full z-20 -mt-5 sm:-mt-40"/>
         </Parallax>
 
         {/* Calendario */ }
-        <Calendar targetDate="2026-06-07T19:15:00" />
+
+        <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Calendar targetDate="2026-06-07T19:15:00" />
+        </Suspense>
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
@@ -81,11 +93,15 @@ function App() {
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
-        <ImagesDisplay />
+        <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <ImagesDisplay />
+        </Suspense>
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
-        <Timeline />
+        <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Timeline />
+        </Suspense>
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
@@ -104,12 +120,16 @@ function App() {
         </div>
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
-
-        <Mapa />
+        
+        <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Mapa />
+        </Suspense>
         
         <img src="/divider.png" alt="Divider" className="my-16"/>
 
-        <Formulario />
+        <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Formulario />
+        </Suspense>
 
         <img src="/divider.png" alt="Divider" className="my-16"/>
 

@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import "swiper/css";
 
-export const ImagesDisplay = () => {
+const ImagesDisplay = () => {
     const images = [
         "/1.png",
         "/2.png",
@@ -75,3 +75,5 @@ const Image = ({ src, className = "" }) => (
         className={`w-full ${className} object-cover rounded-2xl select-none pointer-events-none`}
     />
 );
+
+export default ImagesDisplay;

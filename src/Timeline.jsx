@@ -1,4 +1,4 @@
-export const Timeline = () => {
+const Timeline = () => {
     const items = [
     {
         time: "3:30 PM",

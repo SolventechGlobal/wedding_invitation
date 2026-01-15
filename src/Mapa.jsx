@@ -1,6 +1,5 @@
 
-
-export const Mapa = () => {
+const Mapa = () => {
     return(
         <div className="w-full h-full flex flex-col justify-center items-center p-4 text-[#6B6761]">
             <h2 className="mb-2 font-normal text-[2rem] md:text-[2.6rem] tracking-wider">UBICACIÓN</h2>
@@ -13,3 +12,5 @@ export const Mapa = () => {
         </div>
     )
 }
+
+export default Mapa;
