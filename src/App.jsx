@@ -29,7 +29,7 @@ function App() {
       <div className="relative min-h-screen">
 
         {loading && (
-            <div className="fixed inset-0 z-100 bg-white"> 
+            <div className="fixed inset-0 z-100"> 
                 <InitialLoader />
             </div>
         )}
