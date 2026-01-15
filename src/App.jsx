@@ -25,10 +25,11 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  if(loading){
+    return <InitialLoader />;
+  }
+
   return (
-    loading ? (
-      <InitialLoader />
-      ): (
       <div className="relative min-h-screen">
         {/* Background Overlay */}
         <div className="bg-[url('/overlay.webp')] absolute inset-0 opacity-5 z-0 bg-repeat w-auto"></div>
@@ -184,7 +185,6 @@ function App() {
         </div>
 
       </div>
-    )
   );
 }
 
