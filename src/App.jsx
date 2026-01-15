@@ -57,7 +57,7 @@ function App() {
         </div>
 
         <Parallax speed={5} style={{ zIndex: 4 }}>
-          <img src="/flores_transicion.png" 
+          <img src="https://archivos.solventechglobal.com/weeding-assets/flores_transicion.png" 
             alt="Flores Transicion" 
             className="w-full z-20 -mt-5 sm:-mt-40"/>
         </Parallax>
