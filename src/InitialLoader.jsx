@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const InitialLoader = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [hojaFuera, setHojaFuera] = useState(false);
 
     // --- AUTOMATIZACIÓN ---
     useEffect(() => {
@@ -10,8 +11,16 @@ const InitialLoader = () => {
         setIsOpen(true); // Abrir automáticamente
         }, 1300); // Esperar 1.3 segundos (1300ms)
 
+        // Timer para cambiar a sobre sin hoja
+        const timer2 = setTimeout(() => {
+        setHojaFuera(true); // Mostrar sobre vacío
+        }, 2600); // Después de que la hoja salga completamente
+
         // Limpieza: si el componente se desmonta antes de que termine el tiempo, limpiamos el timer.
-        return () => clearTimeout(timer);
+        return () => {
+            clearTimeout(timer);
+            clearTimeout(timer2);
+        };
     }, []);
 
 
@@ -55,10 +64,17 @@ const InitialLoader = () => {
                         `}
                     />
                     <img 
-                        src="/Sobre abierto.png" 
-                        alt="Sobre abierto" 
+                        src="/Sobre abierto hoja.png" 
+                        alt="Sobre abierto con hoja" 
                         className={`absolute w-full h-auto transition-opacity duration-700 z-20
-                            ${isOpen ? 'opacity-100' : 'opacity-0'}
+                            ${isOpen && !hojaFuera ? 'opacity-100' : 'opacity-0'}
+                        `}
+                    />
+                    <img 
+                        src="/Sobre abierto.png" 
+                        alt="Sobre abierto sin hoja" 
+                        className={`absolute w-full h-auto transition-opacity duration-700 z-20
+                            ${hojaFuera ? 'opacity-100' : 'opacity-0'}
                         `}
                     />
                 </div>
