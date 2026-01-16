@@ -19,49 +19,58 @@ const InitialLoader = () => {
         // Contenedor principal centrado
         <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 overflow-hidden">
         
-        <div className="relative w-72 h-48 bg-gray-400 rounded-b-lg shadow-2xl transition-transform hover:scale-105 mt-20">
+        <div className="relative w-96 h-auto flex items-center justify-center">
             
-            {/* --- LA CARTA (El contenido que se anima) --- */}
-            <div 
-            className={`absolute left-6 right-6 bg-white shadow-[0_0_15px_rgba(0,0,0,0.1)] text-center flex flex-col items-center justify-center rounded-lg border-2 border-gray-100 h-auto py-8 px-4
-                ${isOpen 
-                /* ESTADO ABIERTO:
-                    scale-[1.8]: Se agranda casi al doble.
-                    delay-700: Espera un poco a que la solapa se abra antes de empezar a subir lentamente.
-                    z-50: Se asegura de quedar ENCIMA de todo el sobre al final.
-                */
-                ? 'scale-[1.4] delay-700 duration-1000 z-50 opacity-100' 
-                /* ESTADO CERRADO:
-                    top-16: Posición inicial dentro del sobre.
-                    scale-95: Un poco más pequeña adentro.
-                    z-10: Entre la capa trasera y el frente del sobre.
-                */
-                : 'top-16 scale-95 delay-0 z-10 opacity-0'
-                }
-            `}
-            >
-
-            <div className="font-Inria font-light text-gray-700">
-                <h2 className="text-2xl">¡Eres un invitado especial!</h2>
-            </div>
-            </div>
-
-
-            {/* --- EL FRENTE DEL SOBRE (Bolsillo inferior) --- */}
-            <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none">
-                <div className="border-l-144 border-r-144 border-b-96 border-l-transparent border-r-transparent border-b-gray-300 rounded-b-lg drop-shadow-md"></div>
-            </div>
-            
-            {/* --- LA SOLAPA SUPERIOR --- */}
-            {/* He ralentizado un poco la solapa (duration-1000) para que acompañe mejor a la carta lenta */}
-            <div className={`absolute top-0 left-0 right-0 z-30 transition-transform duration-1000 ease-in-out origin-top
-                ${isOpen ? 'rotate-x-180' : 'rotate-x-0'}
-            `}
-                style={{ transformStyle: 'preserve-3d' }}
+            {/* --- IMAGEN DEL SOBRE (Base) --- */}
+            <div className="relative w-full">
+                <img 
+                    src="/SOBRE.png" 
+                    alt="Sobre base" 
+                    className="w-full h-auto opacity-0"
+                />
+                
+                {/* --- TEXTO (El contenido que se anima) --- */}
+                <div 
+                    className={`absolute inset-0 flex items-center justify-center transition-all
+                        ${isOpen 
+                        ? 'scale-110 -translate-y-32 delay-700 duration-1000 z-50 opacity-100' 
+                        : 'scale-90 translate-y-0 delay-0 z-10 opacity-0'
+                        }
+                    `}
                 >
-                <div className="border-l-144 border-r-144 border-t-96 border-l-transparent border-r-transparent border-t-gray-300 drop-shadow-md"></div>
-                {/* Línea de pliegue */}
-                <div className={`absolute top-0 left-0 w-full h-0 border-t border-gray-800 opacity-30 ${isOpen ? 'hidden' : 'block'}`}></div>
+                    <div className="bg-white shadow-2xl rounded-lg p-8 border-2 border-gray-100">
+                        <h2 className="text-2xl md:text-3xl font-Inter text-[#6B6761] text-center">
+                            ¡Eres un invitado especial!
+                        </h2>
+                    </div>
+                </div>
+
+                {/* --- SOBRE CERRADO/ABIERTO (Transición) --- */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <img 
+                        src="/Sobre cerrado.png" 
+                        alt="Sobre cerrado" 
+                        className={`absolute w-full h-auto transition-opacity duration-700 z-20
+                            ${isOpen ? 'opacity-0' : 'opacity-100'}
+                        `}
+                    />
+                    <img 
+                        src="/Sobre abierto.png" 
+                        alt="Sobre abierto" 
+                        className={`absolute w-full h-auto transition-opacity duration-700 z-20
+                            ${isOpen ? 'opacity-100' : 'opacity-0'}
+                        `}
+                    />
+                </div>
+
+                {/* --- SELLO A&Y --- */}
+                <div className="absolute inset-0 flex items-center justify-center z-30">
+                    <img 
+                        src="/Sello A&Y.png" 
+                        alt="Sello A&Y" 
+                        className="max-w-full h-auto drop-shadow-md"
+                    />
+                </div>
             </div>
 
         </div>
