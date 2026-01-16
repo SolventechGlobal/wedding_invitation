@@ -2,6 +2,7 @@
 const Formulario = () => {
     return(
         <div className="w-full h-full flex flex-col justify-center items-center p-4 text-[#6B6761]">
+            <img src="/divisor.png" alt="Divisor" className="w-70"/>
             <h2 className="mb-2 text-center font-normal text-[1.7rem] md:text-[2.6rem] tracking-wider">CONFIRMA TU ASISTENCIA</h2>
             <h4 className="text-2xl mb-10 text-center font-light">¡Esperamos contar contigo!</h4>
             <iframe src="https://forms.gle/bw2yhwTtiGBtCmYFA" 

@@ -42,7 +42,7 @@ const InitialLoader = () => {
             >
 
             <div className="font-Inria font-light text-gray-700">
-                <h2 className="text-2xl">¡Estas invitado!</h2>
+                <h2 className="text-2xl">¡Eres un invitado especial!</h2>
             </div>
             </div>
 

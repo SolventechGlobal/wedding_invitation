@@ -90,13 +90,14 @@ function App() {
           </Parallax>
 
           {/* Calendario */ }
-          <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Suspense fallback={<div className="font-Inria text-[#6B6761] my-16">Cargando...</div>}>
             <Calendar targetDate="2026-06-07T19:15:00" />
           </Suspense>
 
           <img src="/divider.png" alt="Divider" className="my-16"/>
 
           <div className="text-[#6B6761] flex flex-col items-center px-4 w-full">
+            <img src="/divisor.png" alt="Divisor" className="w-70"/>
             <h2 className="mb-10 tracking-[7%] text-[1.7rem] md:text-[2.6rem]">NUESTRA HISTORIA</h2>
             <p className="text-xl max-w-6xl px-4 mb-6 text-justify font-light">
               Un amor que inició aquel 10 de agosto de 2019. 
@@ -106,29 +107,31 @@ function App() {
               donde todos son recibidos con cariño. Por eso, hemos decidido compartir con ustedes, las personas que amamos, 
               este día tan especial para nosotros.
             </p>
+            <img src="/divisor.png" alt="Divisor" className="w-70 transform rotate-180"/>
           </div>
 
           <img src="/divider.png" alt="Divider" className="my-16"/>
 
-          <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Suspense fallback={<div className="font-Inria text-[#6B6761] my-16">Cargando...</div>}>
             <ImagesDisplay />
           </Suspense>
 
           <img src="/divider.png" alt="Divider" className="my-16"/>
 
-          <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Suspense fallback={<div className="font-Inria text-[#6B6761] my-16">Cargando...</div>}>
             <Timeline />
           </Suspense>
 
           <img src="/divider.png" alt="Divider" className="my-16"/>
 
-          <div className="text-center px-4 text-[#6B6761]">
+          <div className="text-center px-4 text-[#6B6761] flex flex-col items-center w-full">
+            <img src="/divisor.png" alt="Divisor" className="w-70"/>
             <h2 className="mb-10 tracking-wider text-[1.7rem] md:text-[2.6rem]">CÓDIGO DE VESTIMENTA</h2>
             <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Hombres:</span> Smoking negro.</p>
             <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6"><span className="font-bold">Mujeres:</span> Vestido formal unicolor</p>
             <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Se reservan las tonalidades:</span></p>
             <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6">Blanco, Beige</p>
-            <img src="/dresscode.png" loading="lazy" alt="Dress Code" className="my-16 mx-auto"/>
+            <img src="/dresscode.png" loading="lazy" alt="Dress Code" className="my-6"/>
 
             <div className="flex flex-row justify-center items-center gap-3">
               <img src="/Carta.png" alt="Sobre" className="w-25"/>
@@ -138,13 +141,13 @@ function App() {
 
           <img src="/divider.png" alt="Divider" className="my-16"/>
           
-          <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Suspense fallback={<div className="my-16 font-Inria text-[#6B6761]">Cargando...</div>}>
             <Mapa />
           </Suspense>
           
           <img src="/divider.png" alt="Divider" className="my-16"/>
 
-          <Suspense fallback={<div className="my-16">Cargando...</div>}>
+          <Suspense fallback={<div className="font-Inria text-[#6B6761] my-16">Cargando...</div>}>
             <Formulario />
           </Suspense>
 
@@ -185,7 +188,6 @@ function App() {
         </footer>
 
         </div>
-
       </div>
   );
 }
