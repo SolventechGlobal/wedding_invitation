@@ -127,8 +127,8 @@ function App() {
           <div className="text-center px-4 text-[#6B6761] flex flex-col items-center w-full">
             <img src="/divisor.png" alt="Divisor" className="w-70"/>
             <h2 className="mb-10 tracking-wider text-[1.7rem] md:text-[2.6rem]">CÓDIGO DE VESTIMENTA</h2>
-            <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Hombres:</span> Smoking negro.</p>
-            <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6"><span className="font-bold">Mujeres:</span> Vestido formal unicolor</p>
+            <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Hombres:</span>Corbata negra.</p>
+            <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6"><span className="font-bold">Mujeres:</span> Vestido formal largo.</p>
             <p className="font-light text-xl max-w-2xl mx-auto px-4"><span className="font-bold">Se reservan las tonalidades:</span></p>
             <p className="font-light text-xl max-w-2xl mx-auto px-4 mb-6">Blanco, Beige</p>
             <img src="/dresscode.png" loading="lazy" alt="Dress Code" className="my-6"/>
